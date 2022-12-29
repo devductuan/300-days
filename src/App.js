@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Entry from "./pages/Entry";
+import Home from "./pages/Home";
+import ThreePage from "./pages/ThreePage";
 
 function App() {
+  const [openMain, setOpenMain] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+      {openMain ? <Home /> : <Entry setOpenMain={setOpenMain} />}
+      {/* <Home /> */}
     </div>
   );
 }

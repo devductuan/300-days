@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.special-cursor {
+  position  : absolute;
+  z-index   : 10000;
+  width     : 112px;
+  height    : 112px;
+  background: transparent url(../src/textures/cursor.gif) 0 0 no-repeat;
+}
